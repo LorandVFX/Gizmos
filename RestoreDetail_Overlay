@@ -1,0 +1,763 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+BackdropNode {
+inputs 0
+name BackdropNode23
+tile_color 0x388e8e00
+label "ADDITIVE OVERLAY"
+note_font_size 42
+selected true
+xpos 1833
+ypos 3479
+bdwidth 1413
+bdheight 1025
+}
+Roto {
+inputs 0
+output alpha
+curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 2097664}
+    {t x44aae000 x446de000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}
+    {curvegroup Bezier1 512 bezier
+     {{cc
+       {f 8192}
+       {px
+        {x447a4000 x448bc000}
+        {{xc1400000}
+      {xc32c0000}}
+        {{x44cac000}
+      {xc1f00000}}
+        {{x41400000}
+      {x432c0000}}
+        {{0}
+      {xc34e0000}}
+        {{x44cd8000}
+      {x44100000}}
+        {{0}
+      {x434e0000}}
+        {{x41d00000}
+      {xc2d80000}}
+        {{x44c78000}
+      {x44a94000}}
+        {{xc1d00000}
+      {x42d80000}}
+        {{x42c40000}
+      {xc2400000}}
+        {{x44a74000}
+      {x44f14000}}
+        {{xc2c40000}
+      {x42400000}}
+        {{x42100000}
+      {x43340000}}
+        {{x445e8000}
+      {x44c90000}}
+        {{xc2100000}
+      {xc3340000}}
+        {{x42280000}
+      {x43640000}}
+        {{{x44360000 -}
+       {x4443cccd -}}
+      {{x44308000 -}
+       {x442bb334 -}}}
+        {{xc2280000}
+      {xc3640000}}
+        {{xc3820000}
+      {xc2500000}}
+        {{x44390000 x4471b334}
+      {xc41d0000 xc41d9998}}
+        {{x43820000}
+      {x42500000}}
+        {{xc3180000}
+      {xc2d40000}}
+        {{x449b4000}
+      {xc3f70000}}
+        {{x43180000}
+      {x42d40000}}
+        {{xc1c00000}
+      {xc1800000}}
+        {{x44bdc000}
+      {xc3870000}}
+        {{x41c00000}
+      {x41800000}}}}     idem}
+     {tx x447a4000 x444fe666 x43aa0000}
+     {a osw x41200000 osf 0 str 1 spx x44aae000 spy x446de000 sb 1 ltn x447a4000 ltm x447a4000 tt x40800000}}}}}}
+toolbox {selectAll {
+  { selectAll str 1 ssx 1 ssy 1 sf 1 }
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+toolbar_brush_hardness 0.200000003
+toolbar_source_transform_scale {1 1}
+toolbar_source_transform_center {1367 951.5}
+colorOverlay {0 0 0 0}
+lifetime_type "all frames"
+lifetime_start 1001
+lifetime_end 1001
+motionblur_shutter_offset_type centred
+source_black_outside true
+name Roto33
+selected true
+xpos 2056
+ypos 3911
+}
+Blur {
+size 44.5
+name Blur39
+selected true
+xpos 2056
+ypos 3959
+}
+Tracker4 {
+tracks { { 1 31 1 }
+{ { 5 1 20 enable e 1 }
+{ 3 1 75 name name 1 }
+{ 2 1 58 track_x track_x 1 }
+{ 2 1 58 track_y track_y 1 }
+{ 2 1 63 offset_x offset_x 1 }
+{ 2 1 63 offset_y offset_y 1 }
+{ 4 1 27 T T 1 }
+{ 4 1 27 R R 1 }
+{ 4 1 27 S S 1 }
+{ 2 0 45 error error 1 }
+{ 1 1 0 error_min error_min 1 }
+{ 1 1 0 error_max error_max 1 }
+{ 1 1 0 pattern_x pattern_x 1 }
+{ 1 1 0 pattern_y pattern_y 1 }
+{ 1 1 0 pattern_r pattern_r 1 }
+{ 1 1 0 pattern_t pattern_t 1 }
+{ 1 1 0 search_x search_x 1 }
+{ 1 1 0 search_y search_y 1 }
+{ 1 1 0 search_r search_r 1 }
+{ 1 1 0 search_t search_t 1 }
+{ 2 1 0 key_track key_track 1 }
+{ 2 1 0 key_search_x key_search_x 1 }
+{ 2 1 0 key_search_y key_search_y 1 }
+{ 2 1 0 key_search_r key_search_r 1 }
+{ 2 1 0 key_search_t key_search_t 1 }
+{ 2 1 0 key_track_x key_track_x 1 }
+{ 2 1 0 key_track_y key_track_y 1 }
+{ 2 1 0 key_track_r key_track_r 1 }
+{ 2 1 0 key_track_t key_track_t 1 }
+{ 2 1 0 key_centre_offset_x key_centre_offset_x 1 }
+{ 2 1 0 key_centre_offset_y key_centre_offset_y 1 }
+}
+{
+ { {curve K x1001 1} "track 1" {curve x1001 567 568.4866333 569.9786987 571.3493042 572.5067749 573.6398315 574.5960083 575.310791 575.7501221 576.137207 576.3029785 576.3948975 576.4880981 576.5609131 576.633728 576.7098389 576.8012695 576.8262939 576.8635864 576.8713379 576.8387451 576.9075317 576.9124756 576.9033203 576.8875122 576.8817139 576.8876953 576.9013672 576.8614502 576.8400269 576.8361816 576.8327026 576.8125 576.74823 576.7205811 576.6368408 576.5701904 576.3766479 576.1340332 575.734436 575.1509399 574.8544922 574.5177612 574.2828369 573.8909912 573.5756836 573.1803589 572.645813 572.2246704 571.7200928 571.3034668 570.8186646 570.4780273 570.1560669 569.7889404 569.4547729 569.1688843 568.9776001 568.776001 568.5564575 568.3376465 567.9729004 567.6334839 567.2611084 567.0291748 566.7722168 566.4338989 566.3226929 566.211792 566.1838379 566.1577148 566.1360474 566.0874634 566.0202026 565.9451294 565.8212891 565.6477051 565.1677246 564.6002808 564.1935425 563.8034058 563.4545288 563.0846558 562.708252 562.3944702 561.9682007 561.4859619 561.0350342 560.4975586 559.956543 559.2994995 558.6765137 558.0947876 557.696167 557.3939209 557.0214233 556.6279907 556.3539429 556.0045776 555.7236938 555.5264893 555.3036499 555.1656494 555.026123 554.8602905 554.7298584 554.5405884 554.4083252 554.2041626 554.0327148 553.7423706 553.5113525 553.3910522 553.2657471 553.1292725 552.9061279 552.7172852 552.6531372} {curve x1001 456 456.5566711 457.6775818 458.447937 458.5628357 458.096405 458.5835266 459.1399841 459.7923889 460.1405945 459.7044373 459.9109497 459.940094 460.2693176 459.895752 459.7120056 460.0222473 460.0588684 459.7991943 459.3146362 459.0252991 460.1167603 460.1269531 460.0909424 460.0220642 460.2835388 460.6236267 460.8096313 460.9107056 460.5924072 460.6313782 460.6593933 460.8598022 460.8928223 461.0545044 460.9136353 461.1925659 460.878418 460.9454956 460.790802 460.4373169 460.8269043 461.1100464 460.879364 460.556427 460.7181091 461.4618225 461.4356689 461.841156 461.5681458 461.9333801 461.9450378 462.0257263 462.0329285 462.4033813 462.3053894 462.5718079 462.7063904 462.9528809 463.3014832 463.6357117 463.018158 463.1012268 462.9047241 463.346344 463.7567749 463.7260742 463.8362122 463.5853271 463.7569885 463.6425476 463.6392517 463.4693604 463.1703491 462.5872498 462.5905151 462.5653687 462.3587341 462.0147095 461.9161072 461.7930603 461.8052063 461.9122009 462.1662903 462.2384338 462.2406921 461.5540466 461.7658997 461.9028625 461.9094238 461.778595 461.7355042 461.7971191 461.6040344 461.5741882 461.1287231 461.3118286 461.951416 461.4757385 461.1613464 461.085083 461.4338989 461.765625 461.7374878 461.5644226 461.0724182 461.1386108 461.4312134 461.708313 461.9404602 461.6855164 462.0541382 461.597229 461.339447 461.1385193 461.2121582 461.6322327 461.8015442} {curve K x1001 0} {curve K x1001 0} 1 0 0 {curve x1001 1 7.67123951e-07 8.891363454e-07 1.270684166e-06 1.338692032e-06 1.575180963e-06 1.696052474e-06 1.913140971e-06 2.031331309e-06 2.032232258e-06 2.20311557e-06 2.259622516e-06 2.839033363e-06 2.829225873e-06 2.382592073e-06 2.316009453e-06 2.620268274e-06 2.779872944e-06 2.273667003e-06 1.631770685e-06 1.658251313e-06 2.203248918e-06 2.466217843e-06 2.534964278e-06 2.732568689e-06 3.241827354e-06 3.156912893e-06 3.124326059e-06 2.952135228e-06 2.862296504e-06 2.680168969e-06 2.731974562e-06 2.510465395e-06 2.339487542e-06 2.53429862e-06 3.030037083e-06 3.162946107e-06 3.217731491e-06 3.694817873e-06 3.64243717e-06 3.28042947e-06 2.929513562e-06 2.435228701e-06 2.107472247e-06 1.991745623e-06 1.969108274e-06 1.723009061e-06 1.403372802e-06 1.516070674e-06 1.599288614e-06 1.528140088e-06 1.614341507e-06 1.472279571e-06 1.597236752e-06 1.56402103e-06 1.305296418e-06 1.46169247e-06 1.51114292e-06 1.904426571e-06 2.00158414e-06 1.550582383e-06 1.126158805e-06 1.115767475e-06 1.502097075e-06 1.578043964e-06 1.57461901e-06 1.564252339e-06 1.28515116e-06 1.333723e-06 1.226023528e-06 1.524130104e-06 1.296563098e-06 1.440988407e-06 1.077223383e-06 9.490181135e-07 1.028306778e-06 1.086518041e-06 1.03412017e-06 1.102717572e-06 9.862446765e-07 7.808258056e-07 8.931066823e-07 8.579392473e-07 1.028880386e-06 1.088511939e-06 9.355878369e-07 9.651982345e-07 1.090406272e-06 1.030449442e-06 9.018242488e-07 9.559785653e-07 7.4082989e-07 9.94853041e-07 1.048109251e-06 1.021645677e-06 1.141964343e-06 1.196397269e-06 1.10128697e-06 1.25358893e-06 1.078912208e-06 1.060896164e-06 9.878911584e-07 9.973394894e-07 1.147590262e-06 1.346822308e-06 1.440433845e-06 1.682758229e-06 1.466154354e-06 1.123575852e-06 1.028191541e-06 8.391163267e-07 9.321910194e-07 1.10855392e-06 1.585151276e-06 1.900894967e-06 2.077432702e-06 1.840734773e-06 1.787284942e-06} 0 3.69482e-06 -25 -86 25 86 -29 -58 29 58 {curve} {curve} {curve} {curve} {curve} {curve} {curve} {curve} {curve} {curve} {curve}  }
+}
+}
+
+transform match-move
+reference_frame 1001
+translate {{curve x1001 0 1.486633301 2.97869873 4.349304199 5.506774902 6.639831543 7.596008301 8.310791016 8.75012207 9.137207031 9.302978516 9.394897461 9.488098145 9.560913086 9.633728027 9.709838867 9.801269531 9.826293945 9.863586426 9.871337891 9.838745117 9.907531738 9.912475586 9.903320312 9.887512207 9.881713867 9.887695312 9.901367188 9.861450195 9.840026855 9.836181641 9.832702637 9.8125 9.74822998 9.720581055 9.63684082 9.57019043 9.376647949 9.134033203 8.734436035 8.150939941 7.854492188 7.51776123 7.282836914 6.890991211 6.575683594 6.180358887 5.645812988 5.22467041 4.720092773 4.303466797 3.818664551 3.478027344 3.156066895 2.78894043 2.454772949 2.168884277 1.977600098 1.776000977 1.55645752 1.337646484 0.9729003906 0.6334838867 0.2611083984 0.02917480469 -0.2277832031 -0.5661010742 -0.6773071289 -0.7882080078 -0.8161621094 -0.8422851562 -0.8639526367 -0.9125366211 -0.9797973633 -1.054870605 -1.178710938 -1.352294922 -1.832275391 -2.399719238 -2.80645752 -3.196594238 -3.545471191 -3.915344238 -4.291748047 -4.605529785 -5.031799316 -5.514038086 -5.96496582 -6.502441406 -7.043457031 -7.700500488 -8.323486328 -8.905212402 -9.303833008 -9.606079102 -9.97857666 -10.37200928 -10.64605713 -10.99542236 -11.27630615 -11.47351074 -11.6963501 -11.83435059 -11.97387695 -12.13970947 -12.2701416 -12.45941162 -12.5916748 -12.7958374 -12.96728516 -13.25762939 -13.48864746 -13.60894775 -13.73425293 -13.87072754 -14.09387207 -14.28271484 -14.34686279} {curve x1001 0 0.5566711426 1.677581787 2.447937012 2.562835693 2.096405029 2.583526611 3.139984131 3.792388916 4.140594482 3.704437256 3.910949707 3.940093994 4.269317627 3.895751953 3.712005615 4.022247314 4.058868408 3.799194336 3.31463623 3.025299072 4.116760254 4.126953125 4.090942383 4.022064209 4.283538818 4.623626709 4.809631348 4.910705566 4.592407227 4.631378174 4.659393311 4.859802246 4.892822266 5.054504395 4.913635254 5.192565918 4.878417969 4.945495605 4.790802002 4.437316895 4.826904297 5.110046387 4.879364014 4.556427002 4.718109131 5.46182251 5.435668945 5.841156006 5.568145752 5.933380127 5.945037842 6.025726318 6.032928467 6.403381348 6.305389404 6.571807861 6.706390381 6.952880859 7.301483154 7.63571167 7.018157959 7.101226807 6.904724121 7.346343994 7.756774902 7.726074219 7.836212158 7.585327148 7.756988525 7.642547607 7.639251709 7.469360352 7.170349121 6.587249756 6.590515137 6.565368652 6.358734131 6.014709473 5.916107178 5.793060303 5.805206299 5.912200928 6.166290283 6.238433838 6.240692139 5.554046631 5.765899658 5.902862549 5.909423828 5.778594971 5.73550415 5.797119141 5.604034424 5.574188232 5.128723145 5.311828613 5.951416016 5.475738525 5.161346436 5.085083008 5.433898926 5.765625 5.737487793 5.564422607 5.072418213 5.13861084 5.431213379 5.708312988 5.940460205 5.685516357 6.054138184 5.597229004 5.339447021 5.138519287 5.212158203 5.632232666 5.801544189}}
+center {{curve x1001 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567 567} {curve x1001 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456 456}}
+selected_tracks 0
+name Tracker6
+label "\[value transform]\nreference frame: \[value reference_frame]"
+selected true
+xpos 2056
+ypos 4048
+}
+Dot {
+inputs 0
+name Dot55
+label GARBAGE
+note_font "Bitstream Vera Sans Bold"
+note_font_size 20
+selected true
+xpos 1843
+ypos 4096
+}
+Dot {
+name Dot84
+selected true
+xpos 1843
+ypos 4168
+}
+Merge2 {
+inputs 2
+operation mask
+name Merge27
+selected true
+xpos 2056
+ypos 4171
+}
+Dot {
+name Dot90
+selected true
+xpos 2298
+ypos 4166
+}
+set N1090f780 [stack 0]
+Dot {
+name Dot91
+selected true
+xpos 2298
+ypos 4470
+}
+push $N1090f780
+push $cut_paste_input
+Dot {
+name Dot48
+label SCAN
+note_font "Bitstream Vera Sans Bold"
+note_font_size 20
+selected true
+xpos 2408
+ypos 3559
+}
+Dot {
+name Dot85
+selected true
+xpos 2408
+ypos 3679
+}
+set N21317b40 [stack 0]
+Group {
+name DespillToColor2
+selected true
+xpos 2380
+ypos 3754
+addUserKnob {20 User l main}
+addUserKnob {68 sto l "screen type" t "- auto - The screen type will be controlled by \n  the screen color.\n- picking a primary color acts as an override so for example you can pick a blue-ish screen color but still despill green tones.\n" M {auto green blue red "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""}}
+addUserKnob {18 sc l "screen color"}
+sc {0.06256103516 0.07897949219 0.1704101562}
+addUserKnob {6 sc_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 sc_panelDropped_1 l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 sc_panelDropped_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {18 tc l "target color"}
+tc {0.11 0.11 0.1}
+addUserKnob {6 tc_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 tc_panelDropped_1 l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 tc_panelDropped_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {7 balance t "- determines which colors get affected more by the despill operation. \nlower : red\nhigher : green / blue" R 0 2}
+balance 1
+addUserKnob {7 gain t "Increasing gain will affect a wider range of colors." R 0.5 3.5}
+gain 1.96
+addUserKnob {26 ""}
+addUserKnob {6 enableErode l "enable erode" +STARTLINE}
+addUserKnob {6 spillmatte l "spillmatte output" t "- spillmatte output to alpha channel.\nThis channel is normalised, so the picked color has an alpha value of 1. \nIn ordner not to clamp values above 1 you might choose to grade this mask down a bit." -STARTLINE}
+spillmatte true
+addUserKnob {7 erode t "For blurry edges, eroding the despill matte is an alternative to increasing the gain." R 0.1 50}
+erode 1
+addUserKnob {7 erodeMix l mix}
+erodeMix 1
+addUserKnob {26 ""}
+addUserKnob {7 falloff t "- controls the gamma on the despill matte." R 0.5 1.5}
+falloff 1
+addUserKnob {26 ""}
+addUserKnob {41 maskChannelMask l mask -STARTLINE T mrg.maskChannelMask}
+addUserKnob {41 inject -STARTLINE T mrg.inject}
+addUserKnob {41 invert_mask l invert -STARTLINE T mrg.invert_mask}
+addUserKnob {41 fringe -STARTLINE T mrg.fringe}
+addUserKnob {41 unpremult l "(un)premult by" T despill.unpremult}
+addUserKnob {7 mix}
+mix 1
+addUserKnob {26 ""}
+addUserKnob {20 info l "info / advanced" n 1}
+info 0
+addUserKnob {26 jm l "" +STARTLINE T "Despill to Color by Johannes Masanz\nVersion: 4.4"}
+addUserKnob {26 ""}
+addUserKnob {7 ir l "increase range" t "compensates for screen values higher than 1" R 0 100}
+ir 50
+addUserKnob {20 endGroup_1 l endGroup n -1}
+}
+Input {
+inputs 0
+name mask
+xpos -234
+ypos 280
+number 1
+}
+set N4a972790 [stack 0]
+Input {
+inputs 0
+name source
+xpos -84
+ypos 50
+}
+set N15f263f0 [stack 0]
+Expression {
+temp_name0 which
+temp_expr0 parent.sto==0?parent.sc.b>parent.sc.g?(parent.sc.b>parent.sc.r?1:2):(parent.sc.r>parent.sc.g?2:0):parent.sto-1
+expr0 which==0?r:which==1?r:which==2?g:1
+expr1 which==0?g:which==1?b:which==2?r:1
+expr2 which==0?b:which==1?g:which==2?b:1
+name exp
+xpos 314
+ypos 50
+}
+Expression {
+channel3 alpha
+expr3 parent.gain<1?min((g*parent.gain-(r*parent.balance+b*(1-(parent.balance-1)))/2),(g-(r*parent.balance+b*(1-(parent.balance-1)))/2)):(g*parent.gain-(r*parent.balance+b*(1-(parent.balance-1)))/2)
+name exp2
+xpos 314
+ypos 76
+}
+Grade {
+channels alpha
+whitepoint {{av}}
+name white
+xpos 314
+ypos 102
+addUserKnob {20 User}
+addUserKnob {7 av}
+av {{parent.sto==0?parent.sc.b>parent.sc.g?(parent.sc.b>parent.sc.r?avb:avr):(parent.sc.r>parent.sc.g?avr:avg):parent.sto==1?avg:parent.sto==2?avb:parent.sto==3?avr:1}}
+addUserKnob {7 avr}
+avr {{parent.sc.r*clamp(0.1,parent.gain,inf)-(parent.sc.g*(1-(parent.balance-1))+parent.sc.b*parent.balance)/2}}
+addUserKnob {7 avg}
+avg {{parent.sc.g*clamp(0.1,parent.gain,inf)-(parent.sc.b*(1-(parent.balance-1))+parent.sc.r*parent.balance)/2}}
+addUserKnob {7 avb}
+avb {{parent.sc.b*clamp(0.1,parent.gain,inf)-(parent.sc.g*(1-(parent.balance-1))+parent.sc.r*parent.balance)/2}}
+}
+FilterErode {
+size {{-parent.erode}}
+filter gaussian
+mix {{parent.erodeMix}}
+name erode
+xpos 314
+ypos 140
+disable {{1-parent.enableErode}}
+}
+set N4ac85a30 [stack 0]
+Expression {
+expr3 a>=1?0:1
+name exp3
+xpos 430
+ypos 179
+}
+push $N4ac85a30
+Grade {
+channels alpha
+gamma {{parent.falloff}}
+black_clamp false
+name falloff
+xpos 314
+ypos 178
+}
+push $N4ac85a30
+Merge2 {
+inputs 2+1
+operation copy
+name mrg2
+xpos 314
+ypos 216
+}
+set N9aecdcc0 [stack 0]
+push $N4a972790
+push $N9aecdcc0
+Grade {
+channels alpha
+whitepoint {{parent.white.whitepoint}}
+white {{parent.ir+1}}
+reverse true
+name rev
+xpos 314
+ypos 242
+}
+push $N15f263f0
+Grade {
+inputs 1+1
+channels rgba
+add {{parent.tc*clamp(1/clamp(parent.white.av/(parent.ir+1)),0,inf)-parent.sc*clamp(1/clamp(parent.white.av/(parent.ir+1)),0,inf)} {parent.tc*clamp(1/clamp(parent.white.av/(parent.ir+1)),0,inf)-parent.sc*clamp(1/clamp(parent.white.av/(parent.ir+1)),0,inf)} {parent.tc*clamp(1/clamp(parent.white.av/(parent.ir+1)),0,inf)-parent.sc*clamp(1/clamp(parent.white.av/(parent.ir+1)),0,inf)} {curve}}
+black_clamp false
+unpremult -rgba.alpha
+name despill
+xpos 314
+ypos 280
+}
+push $N15f263f0
+Merge2 {
+inputs 2+1
+operation copy
+bbox B
+maskChannelInput -rgba.alpha
+mix {{parent.mix}}
+name mrg
+xpos -84
+ypos 280
+}
+Shuffle {
+alpha black
+name sh
+tile_color 0x9e3c6300
+xpos -84
+ypos 324
+disable {{1-spillmatte}}
+addUserKnob {20 Presets}
+addUserKnob {26 a l "All Channels"}
+addUserKnob {6 redAll l Red +STARTLINE}
+addUserKnob {6 greenAll l Green +STARTLINE}
+addUserKnob {6 blueAll l Blue +STARTLINE}
+addUserKnob {6 alphaAll l Alpha +STARTLINE}
+addUserKnob {6 noAlpha l "No Alpha" +STARTLINE}
+addUserKnob {26 ""}
+addUserKnob {6 auto_label l "Auto Label" -STARTLINE}
+auto_label true
+}
+Copy {
+inputs 2+1
+from0 rgba.alpha
+to0 rgba.alpha
+bbox B
+name cpy
+xpos -84
+ypos 363
+disable {{1-spillmatte}}
+}
+Output {
+name Output
+xpos -84
+ypos 417
+}
+end_group
+set N11471290 [stack 0]
+Dot {
+name Dot86
+selected true
+xpos 2298
+ypos 3751
+}
+Dot {
+name Dot87
+selected true
+xpos 2298
+ypos 3967
+}
+push $N11471290
+Dot {
+name Dot88
+selected true
+xpos 2668
+ypos 3748
+}
+Dot {
+name Dot89
+selected true
+xpos 2668
+ypos 3871
+}
+push $N21317b40
+Dot {
+name Dot54
+selected true
+xpos 2518
+ypos 3696
+}
+Saturation {
+saturation 0
+name Saturation3
+selected true
+xpos 2490
+ypos 3778
+}
+push $N11471290
+Group {
+name PxF_KillSpill1
+help "Remove red/green/blue spill."
+tile_color 0x733520ff
+selected true
+xpos 2380
+ypos 3874
+addUserKnob {20 User}
+addUserKnob {4 back_color l ScreenColor t "Which type of spill to remove." M {red green blue "" ""}}
+back_color green
+addUserKnob {7 supp l Suppression t "Bias the mix of channels used to cap the 'spill' channel.\nFor example when removing 'green spill':\n0 = green channel is capped by the red channel.\n\n0.5 = green channel is capped by half-mix of red and blue channels.\n\n1 = green channel is capped by the blue channel." R 0 2}
+supp 0.5
+addUserKnob {7 masterMult l Limiter t "Gain applied to the 'cap' channel to make the suppression more or less aggressive." R 0 10}
+masterMult 1
+addUserKnob {18 SpillTweak t "Adjust the luminance and color of the spill areas." R 0 10}
+SpillTweak 1
+addUserKnob {6 SpillTweak_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 SpillTweak_panelDropped_1 l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {26 ""}
+addUserKnob {26 t l "" +STARTLINE T "PxF_KillSpill 2.5.2 - (c) 2011 - Xavier Bourque - www.pixelfudger.com"}
+}
+Input {
+inputs 0
+name mask
+xpos -228
+ypos 853
+number 1
+}
+Input {
+inputs 0
+name img
+xpos -496
+ypos -217
+}
+Dot {
+name Dot3
+xpos -462
+ypos -140
+}
+set N105be590 [stack 0]
+Dot {
+name Dot2
+xpos -689
+ypos 208
+}
+Dot {
+name Dot4
+xpos -729
+ypos 756
+}
+push $N105be590
+Dot {
+name Dot1
+xpos -156
+ypos 744
+}
+push $N105be590
+push $N105be590
+Shuffle {
+red blue
+green blue
+alpha black
+name Blue
+xpos 187
+ypos 28
+}
+set Nd0b47e90 [stack 0]
+push $N105be590
+Shuffle {
+red green
+blue green
+alpha black
+name Green
+xpos 76
+ypos 26
+}
+set N23eb2650 [stack 0]
+push $N105be590
+Shuffle {
+green red
+blue red
+alpha black
+name Red
+xpos -17
+ypos 27
+}
+set N73fddbb0 [stack 0]
+Switch {
+inputs 3
+which {{back_color i}}
+name High
+xpos -17
+ypos 132
+}
+push $N23eb2650
+push $N73fddbb0
+Switch {
+inputs 2
+which {{"back_color == 0 ? 1 : back_color == 1 ? 0 : 0" i}}
+name LowA
+xpos 76
+ypos 132
+}
+Multiply {
+value {{"1 - supp" i}}
+name Multiply1
+xpos 76
+ypos 190
+}
+push $Nd0b47e90
+push $N23eb2650
+push 0
+Switch {
+inputs 3
+which {{"back_color == 0 ? 2 : back_color == 1 ? 2 : 1" i}}
+name LowB
+xpos 187
+ypos 140
+}
+Multiply {
+value {{supp i}}
+name Multiply2
+xpos 187
+ypos 187
+}
+Merge2 {
+inputs 2
+operation plus
+name Merge1
+xpos 138
+ypos 299
+}
+Multiply {
+value {{masterMult i}}
+name Multiply3
+xpos 138
+ypos 327
+}
+Merge2 {
+inputs 2
+operation min
+name Merge10
+xpos -17
+ypos 371
+}
+set Na9de5480 [stack 0]
+ShuffleCopy {
+inputs 2
+red red
+green green
+name ShuffleBlue
+xpos -426
+ypos 371
+}
+push $N105be590
+push $Na9de5480
+ShuffleCopy {
+inputs 2
+red red
+blue blue
+name ShuffleGreen
+xpos -526
+ypos 369
+}
+push $N105be590
+push $Na9de5480
+ShuffleCopy {
+inputs 2
+green green
+blue blue
+name ShuffleRed
+xpos -630
+ypos 369
+}
+Switch {
+inputs 3
+which {{back_color i}}
+name Switch1
+xpos -526
+ypos 424
+}
+set N28aca150 [stack 0]
+push $N105be590
+push $N28aca150
+Merge2 {
+inputs 2
+operation minus
+name Merge9
+xpos -338
+ypos 547
+}
+Saturation {
+saturation 0
+name Saturation1
+xpos -338
+ypos 586
+}
+ColorCorrect {
+gain {{SpillTweak.r i} {SpillTweak.g i} {SpillTweak.b i} {1 i}}
+name ColorCorrect1
+xpos -338
+ypos 655
+}
+Merge2 {
+inputs 2
+operation plus
+name Merge11
+xpos -526
+ypos 655
+}
+ShuffleCopy {
+inputs 2
+name ShuffleCopy1
+xpos -526
+ypos 740
+}
+Keymix {
+inputs 3
+invertMask true
+bbox A
+name Keymix1
+selected true
+xpos -526
+ypos 875
+disable {{"\[exists parent.input1] ? 0 : 1" i}}
+}
+set N1f9b38a0 [stack 0]
+Viewer {
+input_process false
+name Viewer1
+xpos 95
+ypos 454
+}
+push $N1f9b38a0
+Output {
+name Output1
+xpos -526
+ypos 980
+}
+end_group
+Merge2 {
+inputs 2+1
+operation plus
+name Merge28
+selected true
+xpos 2490
+ypos 3874
+}
+Grade {
+inputs 1+1
+add 0.34
+name Grade34
+selected true
+xpos 2490
+ypos 3970
+}
+Constant {
+inputs 0
+channels rgb
+color 0.5
+name Constant2
+selected true
+xpos 2664
+ypos 4147
+}
+Keymix {
+inputs 3
+name Keymix11
+selected true
+xpos 2490
+ypos 4165
+}
+Dot {
+name Dot92
+selected true
+xpos 2518
+ypos 4364
+}
+Dot {
+name Dot93
+selected true
+xpos 2945
+ypos 4348
+}
+push 0
+Merge2 {
+inputs 2+1
+operation overlay
+name Merge29
+selected true
+xpos 3156
+ypos 4473
+}

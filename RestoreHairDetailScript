@@ -1,0 +1,295 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+BackdropNode {
+inputs 0
+name BackdropNode26
+tile_color 0x568577ff
+label "Restore hair detail alpha and additive"
+note_font_size 42
+selected true
+xpos 2993
+ypos 4137
+bdwidth 1619
+bdheight 1897
+z_order -1
+}
+BackdropNode {
+inputs 0
+name BackdropNode22
+tile_color 0x7171c600
+label "Plate \n(better with grain if degrained plate is too aggressive)"
+note_font_size 42
+selected true
+xpos 3477
+ypos 4217
+bdwidth 1125
+bdheight 616
+}
+BackdropNode {
+inputs 0
+name BackdropNode23
+tile_color 0x8e388e00
+label "Alpha Key\nor use keymix"
+note_font_size 42
+selected true
+xpos 4005
+ypos 5890
+bdheight 134
+}
+BackdropNode {
+inputs 0
+name BackdropNode24
+tile_color 0x8e8e3800
+label "Color Plate"
+note_font_size 42
+selected true
+xpos 4149
+ypos 4914
+bdheight 168
+}
+Constant {
+inputs 0
+channels rgb
+color {0.05526893213 0.07131506503 0.1606715918 1}
+name Constant8
+label "Pick Color Plate"
+selected true
+xpos 4159
+ypos 4994
+}
+set N158a4620 [stack 0]
+CheckerBoard2 {
+inputs 0
+name CheckerBoard1
+selected true
+xpos 4006
+ypos 4501
+}
+Dot {
+name Dot98
+selected true
+xpos 4040
+ypos 4671
+}
+set Na90f4850 [stack 0]
+Merge2 {
+inputs 2
+operation minus
+name Merge45
+selected true
+xpos 4006
+ypos 5129
+}
+Shuffle {
+red blue
+green blue
+alpha blue
+name Shuffle9
+label "Dark color"
+selected true
+xpos 4006
+ypos 5243
+}
+set Ne978f510 [stack 0]
+Dot {
+name Dot21
+selected true
+xpos 4040
+ypos 5704
+}
+push $Na90f4850
+Dot {
+name Dot105
+selected true
+xpos 4382
+ypos 4671
+}
+push $N158a4620
+Merge2 {
+inputs 2
+operation minus
+name Merge46
+selected true
+xpos 4348
+ypos 5018
+}
+Shuffle {
+green blue
+blue red
+alpha red
+name Shuffle10
+label "Bright color"
+selected true
+xpos 4348
+ypos 5142
+}
+set N257c1800 [stack 0]
+Dot {
+name Dot15
+selected true
+xpos 4471
+ypos 5151
+}
+AddMix {
+inputs 2
+lut {A {curve 0 x0.7430231571 0.6039800644 x1 1}
+  B {curve 1 x0.1717054248 0.1169154644 x1 0}}
+name AddMix2
+selected true
+xpos 4437
+ypos 5701
+}
+Grade {
+channels alpha
+white 1.26
+name Grade28
+selected true
+xpos 4437
+ypos 5761
+}
+Dot {
+name Dot29
+selected true
+xpos 4471
+ypos 5986
+}
+push 0
+ChannelMerge {
+inputs 2
+name ChannelMerge8
+selected true
+xpos 4015
+ypos 5970
+}
+Roto {
+inputs 0
+output alpha
+curves {{{v x3f99999a}
+  {f 0}
+  {n
+   {layer Root
+    {f 0}
+    {t x44aae000 x446de000}
+    {a pt1x 0 pt1y 0 pt2x 0 pt2y 0 pt3x 0 pt3y 0 pt4x 0 pt4y 0 ptex00 0 ptex01 0 ptex02 0 ptex03 0 ptex10 0 ptex11 0 ptex12 0 ptex13 0 ptex20 0 ptex21 0 ptex22 0 ptex23 0 ptex30 0 ptex31 0 ptex32 0 ptex33 0 ptof1x 0 ptof1y 0 ptof2x 0 ptof2y 0 ptof3x 0 ptof3y 0 ptof4x 0 ptof4y 0 pterr 0 ptrefset 0 ptmot x40800000 ptref 0}}}}}
+toolbox {createBezier {
+  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 tt 4 }
+  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { brush str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
+} }
+toolbar_brush_hardness 0.200000003
+toolbar_source_transform_scale {1 1}
+toolbar_source_transform_center {1367 951.5}
+name Roto22
+selected true
+xpos 3725
+ypos 4994
+}
+Blur {
+name Blur18
+selected true
+xpos 3725
+ypos 5082
+}
+Dot {
+name Dot54
+selected true
+xpos 3759
+ypos 5186
+}
+set N57dfe750 [stack 0]
+Dot {
+name Dot22
+selected true
+xpos 3608
+ypos 5186
+}
+push $N257c1800
+Grade {
+channels alpha
+multiply 2
+name Grade27
+selected true
+xpos 4348
+ypos 5488
+}
+Merge2 {
+inputs 2
+operation mask
+name Merge48
+selected true
+xpos 3574
+ypos 5494
+}
+Constant {
+inputs 0
+channels rgb
+color {0.2239351273 0.09913942218 0.04539941251 1}
+name Constant9
+selected true
+xpos 3003
+ypos 5470
+}
+push $Ne978f510
+Grade {
+channels alpha
+multiply 2
+name Grade26
+selected true
+xpos 3896
+ypos 5243
+}
+push $N57dfe750
+Merge2 {
+inputs 2
+operation mask
+name Merge47
+selected true
+xpos 3725
+ypos 5249
+}
+Constant {
+inputs 0
+channels rgb
+color {0.02026104927 0.008174627088 0.007398458198 1}
+name Constant10
+selected true
+xpos 3011
+ypos 5222
+}
+push $cut_paste_input
+Dot {
+name Dot106
+label BG
+note_font_size 50
+selected true
+xpos 3205
+ypos 5129
+}
+Merge2 {
+inputs 2+1
+operation min
+name Merge49
+selected true
+xpos 3171
+ypos 5249
+}
+Merge2 {
+inputs 2+1
+operation min
+name Merge50
+selected true
+xpos 3171
+ypos 5494
+}

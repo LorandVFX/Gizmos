@@ -1,0 +1,419 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+push $cut_paste_input
+Group {
+name ToeLift2
+selected true
+xpos 1960
+ypos -1966
+addUserKnob {20 User}
+addUserKnob {18 toe}
+toe {0.003 0.003 0.003}
+addUserKnob {6 toe_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 toe_panelDropped_1 l "panel dropped state" -STARTLINE +HIDDEN}
+addUserKnob {6 toe_panelDropped_1_1 l "panel dropped state" -STARTLINE +HIDDEN}
+}
+Input {
+inputs 0
+name Input1
+xpos 1461
+ypos -456
+}
+Dot {
+name Dot1
+xpos 1495
+ypos -269
+}
+set Nc0badb20 [stack 0]
+Dot {
+name Dot4
+xpos 1785
+ypos -269
+}
+Remove {
+channels rgb
+name Remove4
+xpos 1751
+ypos -11
+}
+Dot {
+name Dot5
+xpos 1785
+ypos 443
+}
+push $Nc0badb20
+Dot {
+name Dot2
+xpos 1104
+ypos -269
+}
+set Nc0bbe870 [stack 0]
+Dot {
+name Dot6
+xpos 740
+ypos -269
+}
+Shuffle {
+green red
+blue red
+alpha red
+out rgb
+name Shuffle1
+tile_color 0xff0000ff
+xpos 706
+ypos -225
+}
+Multiply {
+channels rgb
+value {{1/parent.Multiply2.value}}
+name Multiply1
+xpos 706
+ypos -161
+}
+set N76578980 [stack 0]
+Expression {
+channel0 alpha
+expr0 r>1
+channel1 none
+expr1 g>1
+channel2 none
+expr2 b>1
+name Expression2
+xpos 839
+ypos -161
+}
+Dot {
+name Dot9
+xpos 873
+ypos 212
+}
+push $N76578980
+Dot {
+name Dot7
+xpos 614
+ypos -157
+}
+Multiply {
+channels rgb
+value {{parent.Multiply2.value}}
+name Multiply7
+xpos 580
+ypos 103
+}
+Dot {
+name Dot8
+xpos 614
+ypos 212
+}
+push $N76578980
+Clamp {
+channels rgb
+maximum_enable false
+name Clamp1
+xpos 706
+ypos -110
+}
+Gamma {
+channels rgb
+value 0.5
+name Gamma1
+xpos 706
+ypos -58
+}
+Grade {
+channels {rgba.red rgba.green rgba.blue none}
+black 0.5
+gamma {{1-black}}
+black_clamp false
+name Grade7
+tile_color 0xff0000ff
+xpos 706
+ypos -6
+}
+Gamma {
+channels rgb
+value {{1/parent.Gamma1.value}}
+name Gamma2
+xpos 706
+ypos 46
+}
+Multiply {
+channels rgb
+value {{parent.toe.r*2}}
+name Multiply2
+xpos 706
+ypos 98
+}
+Keymix {
+inputs 3
+name Keymix2
+xpos 706
+ypos 202
+}
+Remove {
+operation keep
+channels {rgba.red -rgba.green -rgba.blue none}
+name Remove1
+tile_color 0xff0000ff
+xpos 706
+ypos 266
+}
+Remove {
+operation keep
+channels {rgba.red -rgba.green -rgba.blue none}
+name Remove7
+xpos 706
+ypos 318
+}
+Dot {
+name Dot3
+xpos 740
+ypos 379
+}
+push 0
+push $Nc0bbe870
+Shuffle {
+red green
+blue green
+alpha red
+out rgb
+name Shuffle2
+tile_color 0xff00ff
+xpos 1070
+ypos -225
+}
+Multiply {
+channels rgb
+value {{1/parent.Multiply4.value}}
+name Multiply3
+xpos 1070
+ypos -161
+}
+set Nc05ba1c0 [stack 0]
+Expression {
+channel0 none
+expr0 r>1
+channel1 alpha
+expr1 g>1
+channel2 none
+expr2 b>1
+name Expression3
+xpos 1203
+ypos -161
+}
+Dot {
+name Dot11
+xpos 1237
+ypos 212
+}
+push $Nc05ba1c0
+Dot {
+name Dot10
+xpos 978
+ypos -157
+}
+Multiply {
+channels rgb
+value {{parent.Multiply4.value}}
+name Multiply8
+xpos 944
+ypos 99
+}
+Dot {
+name Dot12
+xpos 978
+ypos 212
+}
+push $Nc05ba1c0
+Clamp {
+channels rgb
+maximum_enable false
+name Clamp2
+xpos 1070
+ypos -109
+}
+Gamma {
+channels rgb
+value 0.5
+name Gamma3
+xpos 1070
+ypos -58
+}
+Grade {
+channels {rgba.red rgba.green rgba.blue none}
+black 0.5
+gamma {{1-black}}
+black_clamp false
+name Grade8
+tile_color 0xff00ff
+xpos 1070
+ypos -6
+}
+Gamma {
+channels rgb
+value {{1/parent.Gamma3.value}}
+name Gamma4
+xpos 1070
+ypos 46
+}
+Multiply {
+channels rgb
+value {{parent.toe.g*2}}
+name Multiply4
+xpos 1070
+ypos 98
+}
+Keymix {
+inputs 3
+name Keymix3
+xpos 1070
+ypos 202
+}
+Remove {
+operation keep
+channels {-rgba.red rgba.green -rgba.blue none}
+name Remove2
+tile_color 0xff00ff
+xpos 1070
+ypos 266
+}
+Remove {
+operation keep
+channels {-rgba.red rgba.green -rgba.blue none}
+name Remove6
+xpos 1070
+ypos 318
+}
+push $Nc0badb20
+Shuffle {
+red blue
+green blue
+alpha red
+out rgb
+name Shuffle3
+tile_color 0xffff
+xpos 1461
+ypos -225
+}
+Multiply {
+channels rgb
+value {{1/parent.Multiply6.value}}
+name Multiply5
+xpos 1461
+ypos -161
+}
+set Nbdbd66f0 [stack 0]
+Expression {
+channel0 none
+expr0 r>1
+channel1 alpha
+expr1 g>1
+channel2 none
+expr2 b>1
+name Expression4
+xpos 1594
+ypos -161
+}
+Dot {
+name Dot13
+xpos 1628
+ypos 212
+}
+push $Nbdbd66f0
+Dot {
+name Dot14
+xpos 1369
+ypos -157
+}
+Multiply {
+channels rgb
+value {{parent.Multiply6.value}}
+name Multiply9
+xpos 1335
+ypos 99
+}
+Dot {
+name Dot15
+xpos 1369
+ypos 212
+}
+push $Nbdbd66f0
+Clamp {
+channels rgb
+maximum_enable false
+name Clamp3
+xpos 1461
+ypos -109
+}
+Gamma {
+channels rgb
+value 0.5
+name Gamma5
+xpos 1461
+ypos -58
+}
+Grade {
+channels {rgba.red rgba.green rgba.blue none}
+black 0.5
+gamma {{1-black}}
+black_clamp false
+name Grade9
+tile_color 0xffff
+xpos 1461
+ypos -6
+}
+Gamma {
+channels rgb
+value {{1/parent.Gamma5.value}}
+name Gamma6
+xpos 1461
+ypos 46
+}
+Multiply {
+channels rgb
+value {{parent.toe.b*2}}
+name Multiply6
+xpos 1461
+ypos 98
+}
+Keymix {
+inputs 3
+name Keymix4
+xpos 1461
+ypos 202
+}
+Remove {
+operation keep
+channels {-rgba.red -rgba.green rgba.blue none}
+name Remove3
+tile_color 0xffff
+xpos 1461
+ypos 249
+}
+Remove {
+operation keep
+channels {-rgba.red -rgba.green rgba.blue none}
+name Remove5
+xpos 1461
+ypos 301
+}
+Merge2 {
+inputs 3+1
+operation max
+name Max
+xpos 1461
+ypos 375
+}
+Copy {
+inputs 2
+channels all
+name Copy1
+xpos 1461
+ypos 427
+}
+Output {
+name Output1
+xpos 1461
+ypos 565
+}
+end_group

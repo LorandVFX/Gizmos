@@ -1,0 +1,9 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+push $cut_paste_input
+pgBokeh {
+name pgBokeh2
+selected true
+xpos 2024
+ypos -2343
+}

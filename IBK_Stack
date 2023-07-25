@@ -1,0 +1,73 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+push $cut_paste_input
+IBKColourV3 {
+name IBKColourV3_1
+selected true
+xpos 2104
+ypos -450
+Size 1
+off -0.024
+mult {0.94 1 1.06}
+erode 5
+}
+IBKColourV3 {
+name IBKColourV3_2
+selected true
+xpos 2104
+ypos -413
+Size {{parent.IBKColourV3_1.Size}}
+off {{IBKColourV3_1.off}}
+mult {{IBKColourV3_1.mult.r} {IBKColourV3_1.mult.g} {IBKColourV3_1.mult.b}}
+multi 8
+}
+IBKColourV3 {
+name IBKColourV3_3
+selected true
+xpos 2104
+ypos -389
+Size {{parent.IBKColourV3_1.Size}}
+off {{IBKColourV3_1.off}}
+mult {{IBKColourV3_1.mult.r} {IBKColourV3_1.mult.g} {IBKColourV3_1.mult.b}}
+multi {{parent.IBKColourV3_2.multi*2}}
+}
+IBKColourV3 {
+name IBKColourV3_4
+selected true
+xpos 2104
+ypos -365
+Size {{parent.IBKColourV3_1.Size}}
+off {{IBKColourV3_1.off}}
+mult {{IBKColourV3_1.mult.r} {IBKColourV3_1.mult.g} {IBKColourV3_1.mult.b}}
+multi {{parent.IBKColourV3_3.multi*2}}
+}
+IBKColourV3 {
+name IBKColourV3_5
+selected true
+xpos 2104
+ypos -341
+Size {{parent.IBKColourV3_1.Size}}
+off {{IBKColourV3_1.off}}
+mult {{IBKColourV3_1.mult.r} {IBKColourV3_1.mult.g} {IBKColourV3_1.mult.b}}
+multi {{parent.IBKColourV3_4.multi*2}}
+}
+IBKColourV3 {
+name IBKColourV3_6
+selected true
+xpos 2104
+ypos -317
+Size {{parent.IBKColourV3_1.Size}}
+off {{IBKColourV3_1.off}}
+mult {{IBKColourV3_1.mult.r} {IBKColourV3_1.mult.g} {IBKColourV3_1.mult.b}}
+multi {{parent.IBKColourV3_5.multi*2}}
+}
+IBKColourV3 {
+name IBKColourV3_7
+selected true
+xpos 2104
+ypos -293
+Size {{parent.IBKColourV3_1.Size}}
+off {{IBKColourV3_1.off}}
+mult {{IBKColourV3_1.mult.r} {IBKColourV3_1.mult.g} {IBKColourV3_1.mult.b}}
+multi {{parent.IBKColourV3_6.multi*2}}
+}

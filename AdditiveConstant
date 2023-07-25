@@ -1,0 +1,65 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+Constant {
+inputs 0
+channels rgb
+color {0.066595 0.08075392246 0.169622 0}
+name Constant10
+selected true
+xpos 1060
+ypos 423
+}
+set N258a2010 [stack 0]
+push $cut_paste_input
+Merge2 {
+inputs 2
+operation minus
+name Merge65
+selected true
+xpos 978
+ypos 595
+}
+Shuffle {
+red blue
+green blue
+alpha blue
+name Shuffle3
+label "\[value in]"
+selected true
+xpos 978
+ypos 619
+}
+Dot {
+name Dot102
+label DARK
+selected true
+xpos 1012
+ypos 852
+}
+push $cut_paste_input
+push $N258a2010
+Merge2 {
+inputs 2
+operation minus
+name Merge66
+selected true
+xpos 1095
+ypos 593
+}
+Shuffle {
+green red
+blue red
+alpha red
+name Shuffle2
+label "\[value in]"
+selected true
+xpos 1089
+ypos 620
+}
+Dot {
+name Dot103
+label BRIGHT
+selected true
+xpos 1117
+ypos 851
+}

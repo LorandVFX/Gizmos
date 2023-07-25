@@ -1,0 +1,50 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+push $cut_paste_input
+Group {
+name DephToReal2
+selected true
+xpos 2024
+ypos -2430
+}
+Input {
+inputs 0
+name Input1
+xpos 777
+ypos -344
+}
+Dot {
+name Dot2
+xpos 811
+ypos -257
+}
+set N18306320 [stack 0]
+Shuffle {
+in depth
+name Shuffle5
+label "\[value in]"
+xpos 1010
+ypos -266
+}
+Expression {
+expr0 1/r
+name Expression2
+selected true
+xpos 1010
+ypos -84
+}
+push $N18306320
+Copy {
+inputs 2
+from0 rgba.red
+to0 depth.Z
+name Copy1
+xpos 777
+ypos -90
+}
+Output {
+name Output1
+xpos 777
+ypos 11
+}
+end_group

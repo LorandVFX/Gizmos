@@ -1,0 +1,338 @@
+Group {
+name LogicalKey2
+tile_color 0x334c66ff
+xpos -47010
+ypos -1257
+addUserKnob {20 User l "Logical Key"}
+addUserKnob {4 rg l Type M {green blue}}
+addUserKnob {4 algo l "Despill Algorythm" M {"red limit" "blue/green limit" "average limit" ""}}
+addUserKnob {6 matte l "apply Matte" +STARTLINE}
+addUserKnob {6 prem l premultiply -STARTLINE}
+addUserKnob {7 mattemix l "Matte Strength"}
+addUserKnob {7 mattemult l "Matte Multiply" R 0.000000000e+00 1.000000000e+01}
+}
+Input {
+inputs 0
+name Input1
+xpos 185
+ypos 194
+}
+Dot {
+name Dot1
+xpos 219
+ypos 234
+}
+set N720d8e70 [stack 0]
+HueShift {
+name HueShift1
+xpos 845
+ypos 230
+}
+set C720db2e0 [stack 0]
+set N720db2e0 [stack 0]
+Expression {
+expr2 b>(r+g)/2?(r+g)/2:b
+expr3 b-(r+g)/2
+name Expression16
+label "rg average limits b"
+xpos 955
+ypos 368
+}
+push $N720db2e0
+Expression {
+expr2 b>g?g:b
+expr3 b-g
+name Expression14
+label "g limits b"
+xpos 845
+ypos 368
+}
+push $N720db2e0
+Expression {
+expr2 b>r?r:b
+expr3 b-r
+name Expression15
+label "r limits b"
+xpos 735
+ypos 368
+}
+Shuffle {
+red alpha
+green black
+blue black
+alpha black
+name Shuffle2
+xpos 735
+ypos 542
+}
+ShuffleCopy {
+inputs 2
+green alpha
+name ShuffleCopy3
+xpos 735
+ypos 568
+}
+ShuffleCopy {
+inputs 2
+blue alpha
+alpha black
+name ShuffleCopy4
+xpos 955
+ypos 568
+}
+Expression {
+expr3 r>0?r+b:r>0
+name Expression9
+xpos 955
+ypos 637
+}
+set N73c13d20 [stack 0]
+Expression {
+expr3 a>0?a+g:a
+name Expression10
+xpos 1065
+ypos 637
+}
+push $N73c13d20
+Merge2 {
+inputs 2
+operation copy
+mix {{parent.mattemix i}}
+name Merge1
+xpos 1013
+ypos 698
+}
+set C73c22820 [stack 0]
+Multiply {
+channels alpha
+value {{parent.mattemult i}}
+name Multiply1
+xpos 1013
+ypos 724
+}
+set C73c29f10 [stack 0]
+Invert {
+name Invert2
+xpos 1013
+ypos 762
+}
+Clamp {
+name Clamp2
+xpos 1013
+ypos 800
+}
+push $N720d8e70
+Expression {
+expr2 b>(r+g)/2?(r+g)/2:b
+expr3 b-(r+g)/2
+name Expression6
+label "rg average limits b"
+xpos 625
+ypos 368
+}
+push $N720d8e70
+Expression {
+expr2 b>g?g:b
+expr3 b-g
+name Expression5
+label "g limits b"
+xpos 515
+ypos 368
+}
+push $N720d8e70
+Expression {
+expr2 b>r?r:b
+expr3 b-r
+name Expression4
+label "r limits b"
+xpos 405
+ypos 368
+}
+Switch {
+inputs 3
+which {{parent.algo i}}
+name Switch1
+xpos 515
+ypos 470
+}
+set C73c51f90 [stack 0]
+Copy {
+inputs 2
+from0 rgba.alpha
+to0 rgba.alpha
+name Copy1
+xpos 515
+ypos 824
+disable {{parent.matte-1 i}}
+}
+set C73c55ec0 [stack 0]
+Dot {
+name Dot3
+xpos 549
+ypos 1002
+}
+push $N720d8e70
+clone $C720db2e0 {
+xpos -475
+ypos 230
+selected false
+}
+set N73c5f290 [stack 0]
+Expression {
+expr1 g>(r+b)/2?(r+b)/2:g
+expr3 g-(r+b)/2
+name Expression13
+label "rb average limits g"
+xpos -365
+ypos 368
+}
+push $N73c5f290
+Expression {
+expr1 g>b?b:g
+expr3 g-b
+name Expression12
+label "b limits g"
+xpos -475
+ypos 368
+}
+push $N73c5f290
+Expression {
+expr1 g>r?r:g
+expr3 g-r
+name Expression11
+label "r limits g"
+xpos -585
+ypos 367
+}
+Shuffle {
+red alpha
+green black
+blue black
+alpha black
+name Shuffle1
+xpos -585
+ypos 532
+}
+ShuffleCopy {
+inputs 2
+green alpha
+name ShuffleCopy1
+xpos -585
+ypos 558
+}
+ShuffleCopy {
+inputs 2
+blue alpha
+alpha black
+name ShuffleCopy2
+xpos -365
+ypos 558
+}
+Expression {
+expr3 r>0?r+b:r>0
+name Expression7
+xpos -365
+ypos 638
+}
+set N73c93e20 [stack 0]
+Expression {
+expr3 a>0?a+g:a
+name Expression8
+xpos -255
+ypos 638
+}
+push $N73c93e20
+clone $C73c22820 {
+inputs 2
+xpos -308
+ypos 702
+selected false
+}
+clone $C73c29f10 {
+xpos -308
+ypos 728
+selected false
+}
+Invert {
+name Invert1
+xpos -308
+ypos 766
+}
+Clamp {
+name Clamp1
+xpos -308
+ypos 804
+}
+push $N720d8e70
+Expression {
+expr1 g>(r+b)/2?(r+b)/2:g
+expr3 g-(r+b)/2
+name Expression3
+label "rb average limits g"
+xpos -34
+ypos 367
+}
+push $N720d8e70
+Expression {
+expr1 g>b?b:g
+expr3 g-b
+name Expression2
+label "b limits g"
+xpos -145
+ypos 368
+}
+push $N720d8e70
+Expression {
+expr1 g>r?r:g
+expr3 g-r
+name Expression1
+label "r limits g"
+xpos -254
+ypos 367
+}
+clone $C73c51f90 {
+inputs 3
+xpos -145
+ypos 470
+selected false
+}
+clone $C73c55ec0 {
+inputs 2
+xpos -145
+ypos 824
+selected false
+}
+Dot {
+name Dot2
+xpos -111
+ypos 1002
+}
+Switch {
+inputs 2
+which {{parent.rg}}
+name Switch3
+xpos 207
+ypos 1070
+}
+set N73cdf8c0 [stack 0]
+Premult {
+name Premult1
+xpos 207
+ypos 1094
+disable {{parent.prem-1 i}}
+}
+Output {
+name Output1
+xpos 207
+ypos 1196
+}
+push $N73cdf8c0
+Viewer {
+gl_buffer_depth half-float
+viewerProcess None
+input_process false
+name Viewer1
+xpos 207
+ypos 1251
+}
+end_group

@@ -1,0 +1,275 @@
+set cut_paste_input [stack 0]
+version 11.2 v5
+push $cut_paste_input
+Dot {
+name Dot106
+selected true
+xpos 3098
+ypos 1028
+}
+set N1536c8b0 [stack 0]
+Dot {
+name Dot108
+selected true
+xpos 2950
+ypos 1153
+}
+set N28275c20 [stack 0]
+Dot {
+name Dot111
+selected true
+xpos 2859
+ypos 1153
+}
+Dot {
+name Dot110
+selected true
+xpos 2859
+ypos 1547
+}
+push $N1536c8b0
+Gizmo {
+name Gizmo1
+tile_color 0x4d06ff
+selected true
+xpos 3064
+ypos 1194
+}
+Input {
+inputs 0
+name Denoised_Plate
+xpos 41
+ypos 122
+}
+IBKColourV3 {
+name IBKColourV3_20
+xpos 41
+ypos 162
+Size 1
+off 0.1
+mult {0.925 1 1}
+erode 5
+}
+Premult {
+name Premult1
+xpos 41
+ypos 206
+}
+Blur {
+channels rgba
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur12
+selected true
+xpos 41
+ypos 251
+}
+set N28690c60 [stack 0]
+Blur {
+channels rgba
+size 50
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur13
+xpos 41
+ypos 299
+}
+set N1ff87f70 [stack 0]
+Blur {
+channels rgba
+size 50
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur14
+xpos 41
+ypos 345
+}
+set N19c532f0 [stack 0]
+Blur {
+channels rgba
+size 50
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur15
+xpos 41
+ypos 395
+}
+set N23b126e0 [stack 0]
+Blur {
+channels rgba
+size 50
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur16
+xpos 41
+ypos 447
+}
+set N288c9040 [stack 0]
+Blur {
+channels rgba
+size 50
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur17
+xpos 41
+ypos 495
+}
+set N28717150 [stack 0]
+Blur {
+channels rgba
+size 100
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur18
+xpos 41
+ypos 547
+}
+set N28315480 [stack 0]
+Blur {
+channels rgba
+size 100
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur19
+xpos 41
+ypos 608
+}
+set N289a84f0 [stack 0]
+Blur {
+channels rgba
+size 100
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur20
+xpos 41
+ypos 673
+}
+set N1731c660 [stack 0]
+Blur {
+channels rgba
+size 100
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur21
+xpos 41
+ypos 734
+}
+set N2176cad0 [stack 0]
+Blur {
+channels rgba
+size 200
+maskChannelInput rgba.alpha
+invert_mask true
+name Blur22
+xpos 41
+ypos 792
+}
+push $N2176cad0
+push $N1731c660
+push $N289a84f0
+push $N28315480
+push $N28717150
+push $N288c9040
+push $N23b126e0
+push $N19c532f0
+push $N1ff87f70
+push $N28690c60
+Switch {
+inputs 11
+which 20
+name Switch2
+xpos -104
+ypos 798
+}
+Unpremult {
+name Unpremult1
+xpos -104
+ypos 910
+}
+Output {
+name Output1
+xpos -104
+ypos 1010
+}
+end_group
+Dot {
+name Dot107
+selected true
+xpos 3098
+ypos 1315
+}
+set N167ea480 [stack 0]
+push $N28275c20
+IBKGizmoV3 {
+inputs 2
+name IBKGizmoV3_3
+xpos 2916
+ypos 1312
+red_weight 0.76
+blue_green_weight 0.335
+autolevels true
+yellow true
+cyan true
+magenta true
+}
+Grade {
+channels alpha
+blackpoint 0.095
+whitepoint 0.85
+name Grade12
+selected true
+xpos 2916
+ypos 1336
+}
+Invert {
+name Invert2
+selected true
+xpos 2916
+ypos 1372
+}
+Dot {
+name Dot109
+selected true
+xpos 2950
+ypos 1449
+}
+Constant {
+inputs 0
+channels rgb
+color {0.02578617819 0.04066341743 0.1864625216 0}
+name Constant1
+selected true
+xpos 3358
+ypos 1103
+}
+push $N167ea480
+Merge2 {
+inputs 2
+operation minus
+name Merge23
+selected true
+xpos 3358
+ypos 1312
+}
+Merge2 {
+inputs 2
+operation multiply
+name Merge24
+selected true
+xpos 3358
+ypos 1446
+}
+Merge2 {
+inputs 2
+operation plus
+name Merge25
+selected true
+xpos 3358
+ypos 1544
+}
+Dot {
+name Dot112
+selected true
+xpos 3636
+ypos 1547
+}
